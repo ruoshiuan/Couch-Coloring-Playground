@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/style.scss" rel="stylesheet" type="text/css" />
+    <title>Couch Coloring Playground</title>
+  </head>
+  <body>
+    <div class="editing-wrapper">
+      <div class="editing-container">
+        <div class="editing-inside">
+          <div class="color-picker">
+            <input type="color" name="couch-color" class="couch-color" id="js-couch-color" value="#D44F67">
+          </div>
+          <div id="js-textures-tray" class="textures-tray" ></div>
+        </div>
+      </div>
+    </div>
+    <div class="options-wrapper">
+      <div class="options-top">
+        <div class="options-top-checkbox">
+          <input type="checkbox" name="optional" id="js-optional" checked>
+          <label for="optional">ACC</label>
+        </div>
+        <button id="js-reset-btn" class="reset-btn">Reset</button>
+        <button id="js-save-btn" class="save-btn">Save</button>
+      </div>
+      <div class="options-container" id="js-options-container">
+        <div class="options-inside" id="js-options-inside">
+            <div class="active option" data-option="back_arm">
+              <img src="/assets/parts/back_arm.png" alt="" width="160">
+            </div>
+            <div class="option" data-option="back-cushion">
+              <img src="/assets/parts/back-cushion.png" alt="" width="160">
+            </div>
+            <div class="option" data-option="sides">
+              <img src="/assets/parts/side.png" alt="" width="160">
+            </div>
+            <div class="option" data-option="seats">
+              <img src="/assets/parts/seats.png" alt="" width="160">
+            </div>
+            <div class="option" data-option="base">
+              <img src="/assets/parts/base.png" alt="" width="160">
+            </div>
+            <div class="option" data-option="support">
+              <img src="/assets/parts/support.png" alt="" width="160">
+            </div>
+            <div class="option" data-option="legs">
+              <img src="/assets/parts/legs.png" alt="" width="160">
+            </div>
+            <div class="optional-group" id="js-optional-group">
+              <div class="option" data-option="blanket_" id="js-blanket">
+                <img src="/assets/parts/blanket.png" alt="" width="160">
+              </div>
+              <div class="option" data-option="small_cushion_001">
+                <img src="/assets/parts/small_cushion_001.png" alt="" width="160">
+              </div>
+              <div class="option" data-option="small_cushion_002">
+                <img src="/assets/parts/small_cushion_002.png" alt="" width="160">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="info" id="js-info"></div>
+      <div class="note-box" id="js-note-box">
+        <ul>
+          <h3 class="note-title">Couch Coloring Playground</h3>
+          <li><strong>Grab</strong> to rotate the couch</li>
+          <li><strong>Scroll ⇅</strong> to zoom</li>
+          <li><strong>Scroll ⇄ / Shift + Scroll</strong> to swipe <br>the bottom menu</li>
+          <li><strong>Scroll ⇅</strong> to swipe the textures tray</li>
+          <div class="note-btn"><button id="js-note-box-btn">ok</button></div>
+        </ul>
+      </div>
+    </div>
+    <canvas id="canvas" class="canvas"></canvas>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
